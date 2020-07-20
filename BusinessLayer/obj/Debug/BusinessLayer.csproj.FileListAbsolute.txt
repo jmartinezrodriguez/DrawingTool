@@ -1,0 +1,5 @@
+C:\Users\jonat\source\repos\DrawingTool\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\jonat\source\repos\DrawingTool\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\jonat\source\repos\DrawingTool\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\jonat\source\repos\DrawingTool\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\jonat\source\repos\DrawingTool\BusinessLayer\obj\Debug\BusinessLayer.pdb

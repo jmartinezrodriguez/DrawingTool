@@ -1,0 +1,52 @@
+﻿@model BusinessLayer.Printer
+
+
+
+<h2>Canvas</h2>
+
+
+<canvas id="canvas" class="canva-color"></canvas>
+
+<canvas id="canvasLine" class="line-color"></canvas>
+
+<canvas id="canvasRectangle" class="rectagle-color"></canvas>
+
+<canvas id="canvasBucket" class="bucket-color"></canvas>
+
+
+<script>
+
+
+    var canvas = document.getElementById('canvas');
+    canvas.width = @Model.canva.Width;
+    canvas.height = @Model.canva.Height;
+
+    var canvasLine = document.getElementById('canvasLine');
+    canvasLine.width = @Model.line.Width;
+    canvasLine.height = @Model.line.Height;
+    var context = canvasLine.getContext('2d');
+    context.beginPath();
+    context.moveTo(@Model.line.X1, @Model.line.Y1);
+    context.lineTo(@Model.line.X2, @Model.line.Y2);
+    context.stroke();
+
+    var canvasRectangle = document.getElementById('canvasRectangle');
+    canvasRectangle.width = @Model.line.Width;
+    canvasRectangle.height = @Model.line.Height;
+    var contextR = canvasRectangle.getContext('2d');
+    contextR.beginPath();
+    contextR.rect(@Model.rectangle.X1, @Model.rectangle.Y1, @Model.rectangle.X2, @Model.rectangle.Y2);
+    contextR.stroke();
+
+
+    var canvasBucket = document.getElementById('canvasBucket');
+    canvasBucket.width = @Model.line.Width;
+    canvasBucket.height = @Model.line.Height;
+    var contextB = canvasBucket.getContext('2d');
+    contextB.beginPath();
+    contextB.fillStyle = "#FF0000";
+    contextB.fillRect(@Model.rectangle.X1, @Model.rectangle.Y1, @Model.rectangle.X2, @Model.rectangle.Y2);
+    contextB.stroke();
+
+</script>
+

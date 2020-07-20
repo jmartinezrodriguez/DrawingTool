@@ -1,0 +1,22 @@
+﻿
+    @Model DrawingTool.Models
+    @{
+
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Index</h2>
+
+    <section style="border-style: solid; border-width: 2px; width: 1024px;">
+        <canvas id="canvas"></canvas>
+    </section>
+
+    <script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(0, 0);
+      context.lineTo(@Model.X, @Model.Y);
+      context.stroke();
+    </script>

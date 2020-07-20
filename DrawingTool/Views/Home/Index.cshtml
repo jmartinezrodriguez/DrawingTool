@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Drawing Tool</h1>
+    <p class="lead">
+        C w h Create Canvas: Should create a new canvas of width w and height h.<br/><br />
+        L x1 y1 x2 y2 Create Line: Should create a new line from (x1,y1) to (x2,y2). Currently
+        only horizontal or vertical lines are supported. Horizontal and vertical
+        lines will be drawn using the 'x' character.<br /><br />
+        R x1 y1 x2 y2 Create Rectangle: Should create a new rectangle, whose upper left
+        corner is (x1,y1) and lower right corner is (x2,y2). Horizontal and vertical
+        lines will be drawn using the 'x' character.<br /><br />
+        B x y c Bucket Fill: Should fill the entire area connected to (x,y) with "colour" c.
+        The behaviour of this is the same as that of the "bucket fill" tool in paint
+        programs
+    </p>
+</div>
+
+<div class="row">
+    <form id="file-upload" action="/Home/UploadFile" method="post" enctype="multipart/form-data">
+        <input id="select-file" type="file" name="file" style="display:none" />
+        <h5>Browse Your File Here:</h5>
+        <div id="file_system" class="row">
+            <div class="col-md-2">
+                <input id="file_name" name="file_name" type="text" class="form-control" disabled>
+            </div>
+            <div class="col-md-2">
+                <button id="btn-browse-file" type="button" class="btn btn-success">Upload File</button>
+                <button id="btn-draw" type="submit" class="btn btn-success">Draw</button>              
+            </div>
+        </div>
+    </form>
+</div>
+
+<br />
+
+
+@*<section style="border-style: solid; border-width: 2px; width: 1024px;">
+    <canvas id="canvas"></canvas>
+</section>*@
+@*<section style="border-style: solid;">
+    <canvas id="canvas2"></canvas>
+</section>*@
+
+@*<script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(0, 0);
+      context.lineTo(@Model.X, @Model.Y);
+      context.stroke();
+</script>*@
+
+@*<script>
+    var canvas = document.getElementById('canvas2');
+    var context = canvas.getContext('2d');
+    context.canvas.width(@Model.Width);
+    context.canvas.height(@Model.Height);
+</script>*@
